@@ -1,0 +1,372 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url(/bento-grid-main/assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf), format('Truetype');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* custom properties */
+:root{
+    /* colors */
+    --purple-100: #dacffc;
+    --purple-500: #7650dc;
+    --yellow-100: #f9eee1;
+    --yellow-500: #ffcb6b;
+    --white-color: #ffffff;
+    --black-color: #121212;
+    --light-blue: #add8e63d;
+
+    /* fonts */
+    --font-family: 'DM Sans', sans-serif;
+
+    --font-size-body: 1.125rem;
+    --font-size-400: 1.25rem;
+    --font-size-500: 1.5rem;
+    --font-size-600: 1.75rem;
+    --font-size-700: 2rem;
+    --font-size-800: 2.5rem;
+    --font-size-900: 5rem;
+
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+    --font-weight-900: 900;
+
+    --border-radius: 10px;
+}
+
+/* resets */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, svg{
+    display: block;
+    max-width: 100%;
+}
+
+/* end of resets */
+
+/* utility classes */
+.social{
+    background-color: var(--purple-500);
+    color: var(--white-color);
+    padding: 2.2rem 1.85rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+.social-title{
+    font-weight: var(--font-weight-600);
+    font-size: 3.2rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.social-title span{
+    color: var(--yellow-500);
+    font-size: 2.7rem;
+    font-weight: var(--font-weight-400);
+}
+
+.social-title .faster{
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size-800);
+    font-weight: var(--font-weight-900);
+}
+
+.social img{
+    width: 13rem;
+    margin-inline: auto;
+}
+
+.social-desc{
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-400);
+}
+
+
+.account{
+    background-color: var(--white-color);
+    padding: 1rem 1.8rem;
+    border-radius: var(--border-radius);
+    color: var(--black-color);
+    font-size: var(--font-size-body);
+}
+
+.account img{
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.calendar{
+    background-color: var(--yellow-500);
+    padding: 1rem 1.5rem 0 1rem;
+    border-radius: var(--border-radius);
+}
+
+.calendar img{
+    width: 14.9rem;
+    margin-top: .7rem;
+}
+
+.media{
+    background-color: var(--purple-100);
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+.media img{
+    margin: 1.5rem 0;
+}
+
+.media-desc{
+    font-size: var(--font-size-400);
+    padding-inline: 1rem;
+    margin: 0 .5rem 0 .5rem;
+}
+
+
+.followers{
+    padding: 1.2rem 3.5rem;
+    background-color: var(--purple-500);
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+
+.followers-desc{
+    color: var(--white-color);
+    margin-top: 2rem;
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-800);
+}
+
+.audience{
+    background-color: var(--white-color);
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.audience > *{
+    margin-bottom: 1rem;
+}
+
+.audience img{
+    width: 14rem;
+}
+
+.audience-title{
+    font-size: var(--font-size-700);
+    font-weight: var(--font-weight-600);
+}
+
+.audience-desc{
+    font-size: var(--font-size-500);
+}
+
+.post{
+    background-color: var(--yellow-100);
+    padding: 1.5rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-400);
+}
+
+.post img{
+    width: 12rem;
+    margin-top: 1.5rem;
+}
+
+.post span{
+    color: var(--purple-500);
+    font-family: var(--font-family);
+}
+
+.AI{
+    background-color: var(--yellow-500);
+    color: var(--black-color);
+    padding: 1.5rem 1.5rem;
+    border-radius: var(--border-radius);
+    line-height: 0.9;
+}
+
+.AI img{
+    width: 14rem;
+    margin-top: 1.5rem;
+}
+
+.ai-title{
+    font-size: var(--font-size-600);
+}
+
+/* general styles */
+body{
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-400);
+    background-color: var(--light-blue);
+}
+
+.main-container{
+    margin: 5rem 0;
+}
+
+.cards-container > *{
+    margin-bottom: 1.5rem;
+}
+
+.cards-container{
+    
+    display: grid;
+    place-content: center;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 370px;
+}
+
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (min-width: 53.1rem) {
+    .cards-container{
+        max-width: 960px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: .5rem 1.5rem;
+    }
+    
+    
+    .social{
+        grid-column: 2 / 4;
+    }
+
+    .post{
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        max-height: 22rem;
+    }
+
+    .media{
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+        overflow: hidden;
+        text-align: left;
+        max-height: 36rem;
+    }
+
+    .media img{
+        margin: 1.5rem 0 1.5rem .3rem;
+        min-width: 18.7rem;
+        height: 19rem;
+    }
+    
+    .media-desc{
+        padding-inline: 0;
+        font-size: 1.1rem;
+        font-weight: var(--font-weight-500);
+        line-height: 1.3;
+        margin-top: 1.5rem;
+    }
+
+    .AI{
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+        margin-top: 4.5rem;
+        line-height: 1.1;
+        max-height: 27rem;
+    }
+
+    .ai-title{
+        font-weight: var(--font-weight-600);
+        font-size: var(--font-size-800);
+        text-align: left;
+    }
+
+    .AI img{
+        margin-top: 2rem;
+        max-width: 15rem;
+
+    }
+
+    .audience{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        max-height: 15rem;
+    }
+
+    .audience > * + *{
+        margin-top: 1.7rem;
+    }
+
+    .audience-title{
+        font-size: var(--font-size-800);
+        font-weight: var(--font-weight-900);
+    }
+
+    .audience-desc{
+        font-size: 1rem;
+        font-weight: var(--font-weight-500);
+        /* margin-bottom: 1rem; */
+    }
+
+    
+
+    .followers{
+        grid-column: 3 / 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem 1rem;
+        max-height: 15rem;
+    }
+
+    .followers img{
+        width: 13rem;
+    }
+    
+    .followers-desc{
+        text-align: left;
+        padding-left: .59rem;
+        font-size: var(--font-size-600);
+        font-weight: var(--font-weight-700);
+        margin-top: .2rem;
+    }
+
+    .calendar, .account{
+        max-height: 13.8rem;
+        overflow: hidden;
+    }
+
+    .account img{
+        max-width: 14.5rem;
+    }
+
+    .account .title{
+        font-size: var(--font-size-500);
+    }
+
+    .grid{
+        display: grid;
+        place-content: center;
+    }
+}
